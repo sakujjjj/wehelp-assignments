@@ -1,0 +1,128 @@
+.top{
+    display: flex;
+}
+
+.home{
+    /* background-color: blue; */
+    flex: none;
+    font-size: 20px;
+    font-weight: bold
+}
+
+.items{
+    /* background-color: blueviolet; */
+    display: flex;
+    /* display: block; */
+    justify-content: flex-end;
+    /* justify-content要有flex auto才能靠右 */
+    flex: auto;
+    /* width: 900px; */
+}
+
+.mobile-items{
+    display: none;
+}
+
+.button{
+    /* background-color: aqua; */
+    
+    flex: none;
+    font-size: 20px;
+}
+
+/* 中間 */
+.NO2{
+    background-color:#ddeef8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 1200px; */
+    height: 300px;
+    
+}
+
+.welcome{
+    /* background-color:#e2f8dd; */
+    flex: none;
+    width: 50%;
+    font-size: 2em;
+    /* font-size: 40px; */
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+/* 圖片 */
+.imagelist{
+    /* background-color: black; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.imageframe{
+    /* background-color: red; */
+    width: 270px;
+    margin: 10px;
+    flex: none ;
+
+    /* display: block; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.imgcenter{
+    vertical-align: text-top;
+    }
+
+.imagetxt{
+    background-color:#ddeef8;
+
+    width: 100%;
+    font-size: 20px;
+    
+    /* justify-content: center; */
+    /* align-items: center; */
+    vertical-align: text-top;
+    text-align: center;
+}
+
+/* 600px<    <1200px */
+@media (max-width:1200px){
+    .welcome{width: auto;
+        font-size: 39px;
+    }
+    .imagelist{
+        flex-wrap: wrap
+    }
+    .imageframe{
+        width: 45%;
+        flex: none ;
+    }
+}
+
+/* <600px */
+@media (max-width:600px) {
+    .home{
+        line-height: 48px;
+    }
+    .items{
+        display: none;
+    }
+    .mobile-items{
+        display: flex;
+        justify-content: flex-end;
+        /* justify-content要有flex auto才能靠右 */
+        flex: auto;
+    }
+
+    .welcome{width: auto;
+        font-size: 30px;
+    }
+    
+    .imageframe{
+        width: 90%;
+    }
+}

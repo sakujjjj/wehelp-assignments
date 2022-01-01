@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+  <div id="container">
+    <div class="lable">測試測試</div>
+    <div class="lable">測試測試</div>
+    <div class="lable">測試測試</div>
+    <div class="lable">測試測試</div>
+    <div class="lable">測試測試</div>
+  <div>
+</body>
+<style>
+  #container {
+    
+    background-color: black;
+    display: flex;
+    display: -webkit-flex;
+    
+    
+    /* 強制 flex item不換行，沿著同一行堆疊 */
+    flex-wrap: nowrap;
+  }
+  .lable {
+    width: 100px;
+    background-color: rgb(255, 104, 104);
+    
+    display: flex;
+    display: -webkit-flex;
+    /* 從左端開始沿水平軸防止flex item */
+    flex-direction: row-reverse;
+    /* 強制 flex item不換行，沿著同一行堆疊 */
+    flex-wrap: nowrap;
+    /* flex item在主軸上的對齊方式，這裡定義左對齊 */
+    justify-content: flex-start;
+    /* 定義交叉軸對其方式 */
+    align-items: flex-start
+  }
+</style>
+</html>
