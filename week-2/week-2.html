@@ -25,13 +25,23 @@
             //要求二
             function avg(data){
                 // var mean = data.count;
-                var sum = data.employees;
+                var sa = data.employees;
+                var i =0;
+                var sum =0 ;
+                while (i <data.count){
+                    
+                    // console.log(sa[i].salary);
+                    sum = sa[i].salary +sum;
+                    // console.log(sum);
+                    i++;
+                    
+                };
+                // console.log(sum);
+
+                // var sa = sum[0].salary+sum[1].salary+sum[2].salary;
                 
-                var sa = sum[0].salary+sum[1].salary+sum[2].salary;
-                
-                var mean = sa/data.count
-                // var salary;
-                console.log(mean)
+                var mean = sum/data.count;
+                console.log(mean);
 
             };
 
