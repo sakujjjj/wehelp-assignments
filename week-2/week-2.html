@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>week-2</title>
+    </head>
+
+    <body>
+        <script>
+            // console.log("Hello Jack");
+            //要求一
+            function caculate(min,max){
+                var sum=0;
+                var i=min;
+                while(i<=max){
+                    sum=sum+i;
+                    i++
+                }
+                console.log(sum)
+            }
+            caculate(1, 3);
+            caculate(4, 8);
+
+            //要求二
+            function avg(data){
+                // var mean = data.count;
+                var sum = data.employees;
+                
+                var sa = sum[0].salary+sum[1].salary+sum[2].salary;
+                
+                var mean = sa/data.count
+                // var salary;
+                console.log(mean)
+
+            };
+
+            avg({
+                "count":3,
+                "employees":[
+                {
+                    "name":"John",
+                    "salary":30000
+                },
+                {
+                    "name":"Bob",
+                    "salary":60000
+                },
+                {
+                    "name":"Jenny",
+                    "salary":50000
+                }
+                ]
+            })
+
+            //要求三
+            function maxProduct(nums){
+                // var max_value = Math.max.apply(null,nums);
+                // // console.log(max_value);
+                // var a = max_value;
+                // // console.log(nums.length);
+
+                // // var nums2 = _.without(nums,a)
+                // nums2 = nums.filter(function(item){
+                //     return item != a
+                // });
+                // // console.log(nums2);
+
+                // var max_value2 = Math.max.apply(null,nums2);
+                // // console.log(max_value2)
+
+                // console.log(max_value*max_value2)
+
+                var negative = nums.filter(function(item){
+                    return item <0
+                });
+                // console.log(negative.length);
+
+                if (negative.length>=2){
+
+                var min_value = Math.min.apply(null,nums);
+                // console.log(max_value);
+                var a = min_value;
+                // console.log(nums.length);
+
+                // var nums2 = _.without(nums,a)
+                nums2 = nums.filter(function(item){
+                    return item != a
+                });
+                // console.log(nums2);
+
+                var min_value2 = Math.min.apply(null,nums2);
+                // console.log(max_value2)
+
+                console.log(min_value*min_value2)
+                }
+                else {
+                var max_value = Math.max.apply(null,nums);
+                // console.log(max_value);
+                var a = max_value;
+                // console.log(nums.length);
+
+                // var nums2 = _.without(nums,a)
+                nums2 = nums.filter(function(item){
+                    return item != a
+                });
+                // console.log(nums2);
+
+                var max_value2 = Math.max.apply(null,nums2);
+                // console.log(max_value2)
+
+                console.log(max_value*max_value2)
+                }
+
+
+            }
+
+            maxProduct([5,20,2,6])
+            maxProduct([10,-20,0,3])
+            maxProduct([-1,2])
+            maxProduct([-1,0,2])
+            maxProduct([-1,-2,0])
+
+            //要求四
+            function twoSum(nums, target){
+
+            for(var i = 0 ; i < nums.length ; i++){
+                   var v = nums[i];
+
+            for(var j = i+1 ; j < nums.length ; j++ ){
+                if(  nums[i] + nums[j]  == target ){
+                return [i,j];
+            }}}}
+
+            let result=twoSum([2, 11, 7, 15], 9);
+            console.log(result); // show [0, 2] because nums[0]+nums[2] is 9
+        </script>
+    </body>
+</html>
