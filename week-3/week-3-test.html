@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 控制裝置縮放 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week-3</title>
+        <link rel="stylesheet" href="week-3-test.css">
+    </head>
+
+    <body>
+        <div class="top">
+            <div class="home">My Website</div>
+            <div class="items">
+                <div class="button">Item 1</div>
+                <div class="button">Item 2</div>
+                <div class="button">Item 3</div>
+                <div class="button">Item 4</div>
+            </div>
+            <div class="mobile-items">
+                <img class="imgsmallcenter" src="items.png" >
+            </div>
+        </div>
+        
+        <!-- 中間 Welcome-->
+        <div class="NO2">
+            <div class="welcome">Welcome to MyHome</div>
+        </div>
+
+        <!-- 下方 圖片 -->
+        <div class="imagelist">
+
+            <div class="imageframe">
+                <img class="imgcenter" src="" alt="Ohh" width="100%" >
+                <div class="imagetxt"></div>
+            </div>
+
+            <div class="imageframe">
+                <img class="imgcenter" src="" alt="Ohh" width="100%" >
+                <div class="imagetxt"></div>
+            </div>
+
+            <div class="imageframe">
+                <img class="imgcenter" src="" alt="Ohh" width="100%">
+                <div class="imagetxt"></div>
+            </div>
+
+            <div class="imageframe">
+                <img class="imgcenter" src="" alt="Ohh" width="100%" >
+                <div class="imagetxt"></div>
+                
+            </div>
+
+        </div>
+
+        <div class="imagelist">
+            <div class="imageframe">
+                <img class="imgcenter" src="" alt="Ohh" width="100%" >
+                <div class="imagetxt"></div>
+            </div>
+
+            <div class="imageframe">
+                <img class="imgcenter" src="" alt="Ohh" width="100%" >
+                <div class="imagetxt"></div>
+                
+            </div>
+
+            <div class="imageframe">
+                <img class="imgcenter" src="" alt="Ohh"  width="100%">
+                <div class="imagetxt"></div>
+                
+            </div>
+
+            <div class="imageframe">
+                <img class="imgcenter" src="" alt="Ohh" width="100%" >
+                <div class="imagetxt"></div>
+            </div>
+                
+        </div>
+        </div>
+
+        <script>
+        let clist_name = [];
+        let clist_img = [];
+        function createdata() {
+            let src ="https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json";
+            fetch(src)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (result) {
+                let x = result.result.results;
+                let mark = "";
+                //-------------------------------------------
+                for (i=0;i<8;i++) {
+                // for (i=0;i<8;i++) {
+                let mark = x[i].stitle;
+                clist_name.push(mark);
+                // console.log(mark)
+        
+                
+                            // 取得容器
+                // var myList = document.getElementById('list0');
+                var myList = document.getElementsByClassName("imagetxt")[i];
+                // 建立新的 <li> 元素
+                var newList = document.createElement('div');
+        
+                // 建立 textNode 文字節點
+                var textNode = document.createTextNode(mark);
+        
+                // 透過 appendChild 將 textNode 加入至 newList
+                newList.appendChild(textNode);
+        
+                // 透過 appendChild 將 newList 加入至 myList
+                myList.appendChild(newList);
+                
+                }
+                //-------------------------------------------
+                for (i=0;i<8;i++) {
+                        let mark = "https" + x[i].file.split("https")[1];
+                        // clist_img.push(mark);
+                        console.log(mark)
+
+                        document.getElementsByClassName("imgcenter")[i].src = mark
+                }
+                //-------------------------------------------
+                // for (let i in x) {
+                // let mark = "https" + x[i].file.split("https")[1];
+                // clist_img.push(mark);
+                // var myimg = document.getElementsByClassName("imgcenter")[i].src;
+                
+                // var link = document.createElement("a");
+                // var newimg = document.createElement("img");
+                // newimg.src = (mark);
+                
+                // link.appendChild(newimg);
+                // // myimg.appendChild(link);
+
+                // document.body.appendChild(link);
+                //     }
+                    // console.log(clist_name[7]);
+                });
+            }
+            createdata();
+            // console.log("call");
+            
+                    </script>
+    </body>
+</html>
+
