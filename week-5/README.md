@@ -6,7 +6,7 @@
 ● 使用 SELECT 指令取得所有在 member 資料表中的會員資料，並按照 time 欄位，由近到遠排序。
 ![image1](https://sakujjjj.github.io/wehelp-assignments/week-5/%E8%A6%81%E6%B1%82%E4%B8%89/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-01-29%20021557.jpg)
 ● 使用 SELECT 指令取得 member 資料表中第 2 ~ 4 共三筆資料，並按照 time 欄位，由近到遠排序。( 並非編號 2、3、4 的資料，而是排序後的第 2 ~ 4 筆資料 )
-![image1](https://sakujjjj.github.io/wehelp-assignments/week-5/%E8%A6%81%E6%B1%82%E4%B8%89/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-01-29%20021609.jpg)
+![image1](https://sakujjjj.github.io/wehelp-assignments/week-5/%E8%A6%81%E6%B1%82%E4%B8%89/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-01-29%20132918.jpg)
 ● 使用 SELECT 指令取得欄位 username 是 test 的會員資料。
 ![image1](https://sakujjjj.github.io/wehelp-assignments/week-5/%E8%A6%81%E6%B1%82%E4%B8%89/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-01-29%20021620.jpg)
 ● 使用 SELECT 指令取得欄位 username 是 test、且欄位 password 也是 test 的資料。
