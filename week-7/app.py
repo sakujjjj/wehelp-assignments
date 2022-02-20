@@ -167,15 +167,15 @@ def members():
 
         # 將字典加入KEYS:data
         dic={"data":eval(results)}
-        print(dic)
+#         print(dic)
         # dataresults = {"data": results}
         # print(dataresults)
         # print(type(dataresults))
 
         return dic
     else:
-        dic={"data":""}
-        print(dic)
+        dic={"data":None}
+#         print(dic)
         return dic
 
 # app.debug = True
