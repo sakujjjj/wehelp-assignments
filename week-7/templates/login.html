@@ -45,78 +45,21 @@
                         console.log(response.json);
                     }).then(function(result){
                         console.log(result["data"].name)
-                    
+                        
                         // 判斷如果抓到null顯示沒有此人
                     if (result["data"] == "null"){
                         list.innerHTML="無此人"
                     }
-
                     else{
                     list.innerHTML="";
                     list.innerHTML+=result["data"].name.bold();
                 }
-
                     });
-                };
-                
-                // let src="http://127.0.0.1:3000/api/members?username="+inputValue;
-                // fetch(src).then(function(response){
-                //         return response.json();
-                //         }).then(function(result){
-                //     console.log(result);
-                //     console.log(result["data"].name);
-
-                //     list.innerHTML="";
-                //     list.innerHTML+=result["data"].name.bold();
-                //         })
-
-            //     function getData(pageName){
-                
-            //     let src="http://127.0.0.1:3000/api/members?username="+pageName;
-            //     console.log(src);
-            //     fetch(src).then(function(response){
-            //         return response.json();
-            //     }).then(function(result){
-            //         // console.log(result);
-            //         // console.log(result["data"].name);
-
-            //         list.innerHTML="";
-            //         list.innerHTML+=result["data"].name.bold();
-
-            //     })
-            // }
-
-                // 原始
-            // let src="http://127.0.0.1:3000/api/members?username=tom123";
-            //     fetch(src).then(function(response){
-            //         return response.json();
-            //     }).then(function(result){
-            //         console.log(result);
-            //         console.log(result["data"].name);
-
-            //         list.innerHTML="";
-            //         list.innerHTML+=result["data"].name.bold();
-
-            //     })
-            
-            </script>
-
-
-
-
-        
+                };                               
+            </script>        
     </center>
     
-//     <!-- <script>
-//     function processFormData() {
-// //取得 name 屬性為 form 的表單
-//     const form = document.forms['form'];
-// //取 elements 集合中 name 屬性為 name 的值
-//     const name = form.elements.name.value;
-//     alert("hi"+name);
-//     console.log(name)
-//         } -->
-    
+
     
 
     
