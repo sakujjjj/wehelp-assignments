@@ -174,7 +174,7 @@ def members():
 
         return dic
     else:
-        dic={"data":"null"}
+        dic={"data":""}
         print(dic)
         return dic
 
