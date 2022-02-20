@@ -100,7 +100,7 @@ def signout():
 def member():
     if session["state"] == "login":
         value = session["value"]
-        return render_template("test_login.html", value=value)
+        return render_template("login.html", value=value)
 
     else: 
         return render_template("index.html")
