@@ -42,12 +42,12 @@
                     // alert(src)
                     fetch(src).then(function(response){
                         return response.json();
-                        console.log(response.json);
+//                         console.log(response.json);
                     }).then(function(result){
-                        console.log(result["data"].name)
+//                         console.log(result["data"].name)
                         
                         // 判斷如果抓到null顯示沒有此人
-                    if (result["data"] == ""){
+                    if (result["data"] == null){
                         list.innerHTML="無此人"
                     }
                     else{
